@@ -9,7 +9,8 @@ import pom.MainPage;
 import java.time.Duration;
 
 import static org.example.Urls.LOGIN_PAGE_URL;
-public class LogoutTest extends BeforeAndAfterTest{
+
+public class LogoutTest extends BeforeAndAfterTest {
     @Test
     @DisplayName("Checking the logout by Выход on the profile page")
     @Description("Check that the main page is displayed")

@@ -5,7 +5,8 @@ import org.junit.Test;
 import pom.MainPage;
 import pom.PasswordRecoverPage;
 import pom.RegistrationPage;
-public class LoginTests extends BeforeAndAfterTest{
+
+public class LoginTests extends BeforeAndAfterTest {
     @Test
     @DisplayName("Checking the login by Войти в аккаунт button on the main page")
     @Description("Check that the main page is displayed with Оформить заказ")

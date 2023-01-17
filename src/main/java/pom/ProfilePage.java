@@ -1,4 +1,5 @@
 package pom;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,11 +19,13 @@ public class ProfilePage {
         driver.findElement(goToConstructor).click();
         return new MainPage(driver);
     }
+
     @Step("Click on Logo image from profile page")
     public MainPage clickOnLogo() {
         driver.findElement(burgerLogo).click();
         return new MainPage(driver);
     }
+
     @Step("Click on Выход button from profile page")
     public LoginPage clickLogOutButton() {
         driver.findElement(logOutButton).click();

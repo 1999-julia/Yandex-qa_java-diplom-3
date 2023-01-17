@@ -15,6 +15,7 @@ import java.time.Duration;
 
 import static org.example.Urls.ERROR_MESSAGE_OF_WRONG_PASSWORD;
 import static pom.RegistrationPage.registerWrongPasswordMessageInRegisterPage;
+
 public class ErrorMessageTest {
     private WebDriver driver;
     private User user;

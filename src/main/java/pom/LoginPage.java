@@ -1,4 +1,5 @@
 package pom;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -39,6 +40,7 @@ public class LoginPage {
         driver.findElement(loginEnterButton).click();
         return new MainPage(driver);
     }
+
     @Step("Fill the authorization form")
     public LoginPage authorizationFromLoginPage(String email, String password) {
         new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.urlToBe(LOGIN_PAGE_URL));

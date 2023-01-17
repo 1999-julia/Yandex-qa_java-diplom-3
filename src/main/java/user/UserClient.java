@@ -1,4 +1,5 @@
 package user;
+
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.example.Client;

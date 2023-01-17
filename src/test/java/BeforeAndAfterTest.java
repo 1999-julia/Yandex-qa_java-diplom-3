@@ -9,6 +9,7 @@ import data.GeneratorForUsers;
 import user.UserClient;
 
 import java.time.Duration;
+
 public class BeforeAndAfterTest {
     User user;
     String accessToken;

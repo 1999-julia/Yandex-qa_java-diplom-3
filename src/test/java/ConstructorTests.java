@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pom.MainPage;
 
 import java.time.Duration;
+
 public class ConstructorTests {
     private WebDriver driver;
     private MainPage mainPage;

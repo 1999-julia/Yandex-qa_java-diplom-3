@@ -5,11 +5,13 @@ import org.junit.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.MainPage;
+
 import java.time.Duration;
+
 import static org.example.Urls.LOGIN_PAGE_URL;
 import static org.example.Urls.BASE_URL;
 
-public class TransitionTests extends BeforeAndAfterTest{
+public class TransitionTests extends BeforeAndAfterTest {
 
     @Test
     @DisplayName("Switch to the personal account from he main page by Личный Кабинет button by not authorized user")
@@ -21,6 +23,7 @@ public class TransitionTests extends BeforeAndAfterTest{
         new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.urlToBe(LOGIN_PAGE_URL));
         Assert.assertEquals(LOGIN_PAGE_URL, driver.getCurrentUrl());
     }
+
     @Test
     @DisplayName("Switch from the personal account to the main page by Constructor button")
     @Description("Check that the main page is displayed")
@@ -35,6 +38,7 @@ public class TransitionTests extends BeforeAndAfterTest{
         new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.urlToBe(BASE_URL));
         Assert.assertEquals(BASE_URL, driver.getCurrentUrl());
     }
+
     @Test
     @DisplayName("Switch from the personal account to the main page by Logo")
     @Description("Check that the main page is displayed")

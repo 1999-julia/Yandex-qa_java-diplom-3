@@ -15,6 +15,7 @@ public class RegistrationPage {
     private static final By registerName = By.xpath(".//label[text() = 'Имя']/../input[contains(@name, 'name')]");
     private static final By registerEmail = By.xpath(".//label[text() = 'Email']/../input[contains(@name, 'name')]");
     private static final By registerPassword = By.xpath(".//label[text() = 'Пароль']/../input[contains(@type, 'password')]");
+
     public RegistrationPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -24,34 +25,40 @@ public class RegistrationPage {
         driver.get(REGISTER_PAGE_URL);
         return this;
     }
+
     @Step("Enter name on register page")
     public RegistrationPage enterRegisterName(String name) {
         driver.findElement(registerName).click();
         driver.findElement(registerName).sendKeys(name);
         return this;
     }
+
     @Step("Enter email on register page")
     public RegistrationPage enterRegisterEmail(String email) {
         driver.findElement(registerEmail).click();
         driver.findElement(registerEmail).sendKeys(email);
         return this;
     }
+
     @Step("Enter password on register page")
     public RegistrationPage enterRegisterPassword(String password) {
         driver.findElement(registerPassword).click();
         driver.findElement(registerPassword).sendKeys(password);
         return this;
     }
+
     @Step("Click on Зарегистрироваться button on register page")
     public LoginPage clickRegistrationButton() {
         driver.findElement(registrationButton).click();
         return new LoginPage(driver);
     }
+
     @Step("Click on Вход button on register page")
     public LoginPage clickEnterButtonOnRegistrationPage() {
         driver.findElement(enterButtonOnRegistrationPage).click();
         return new LoginPage(driver);
     }
+
     @Step("Register new user with credentials. Fill forms")
     public RegistrationPage registerNewUser(User user) {
         driver.findElement(registerName).click();

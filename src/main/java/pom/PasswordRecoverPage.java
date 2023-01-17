@@ -13,6 +13,7 @@ public class PasswordRecoverPage {
     public PasswordRecoverPage(WebDriver driver) {
         this.driver = driver;
     }
+
     @Step("Open recovery page")
     public PasswordRecoverPage openRecoveryPage() {
         driver.get(RECOVERY_PASSWORD_URL);
